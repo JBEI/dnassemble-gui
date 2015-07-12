@@ -27,6 +27,16 @@ RUN cd /work/genedesign-dev && perl Build.PL && ./Build installdeps && ./Build t
 RUN cpan  XML::LibXML
 RUN cd /work/dnassemble && perl Build.PL && ./Build && ./Build test && ./Build install
 
+RUN apt-get update && apt-get -y install nodejs npm
+RUN npm install -g node-dev express
+
+EXPOSE 80
+
+VOLUME /work/gui
+
+#RUN cd /work/gui && npm install
+
+CMD cd /work/gui && node-dev app.js
 
 # Instructions
 # 
