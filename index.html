@@ -1,15 +1,31 @@
-<form class="form-horizontal">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>Bootply snippet - Bootply Bootstrap Preview</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    </head>
+
+<body>
+<form class="form-horizontal container">
 <!-- File Button --> 
-<div class="control-group">
-  <label class="control-label" for="filebutton">Upload FASTA sequence (the file should contain only one sequence)</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="filebutton">Upload FASTA sequence (the file should contain only one sequence)</label>
   <div class="controls">
     <input id="filebutton" name="filebutton" class="input-file" type="file">
   </div>
 </div>
 
 <!-- Select Basic -->
-<div class="control-group">
-  <label class="control-label" for="selectbasic">Cloning vector</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="selectbasic">Cloning vector</label>
   <div class="controls">
     <select id="selectbasic" name="selectbasic" class="input-xlarge">
       <option>peU_HSBC_NcoI_RAH_GD</option>
@@ -39,8 +55,8 @@
 </div>
 
 <!-- Select Basic -->
-<div class="control-group">
-  <label class="control-label" for="selectbasic">Destination vector</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="selectbasic">Destination vector</label>
   <div class="controls">
     <select id="selectbasic" name="selectbasic" class="input-xlarge">
       <option>peU_HSBC_NcoI_RAH_GD</option>
@@ -69,20 +85,155 @@
   </div>
 </div>
 
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">Assembly temperature</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="70" class="input-xlarge">
+  </div>
+</div>
+
 <fieldset>
-<legend>Local GC</legend>
+<legend>Oligo Length</legend>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">min</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">min</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">max</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">max</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">desired</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">GBlock overlap</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+    <p class="help-block">help</p>
+  </div>
+</div>
+
+</fieldset>
+<fieldset>
+<legend>GBlock Length</legend>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">GBlock length min</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+    <p class="help-block">help</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">GBlock length max</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+    <p class="help-block">help</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">GBlock length desired</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+    <p class="help-block">help</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">GBlock overlap</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+    <p class="help-block">help</p>
+  </div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend>Global GC</legend>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">min</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">max</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+</fieldset>
+
+
+<fieldset>
+<legend>Regional GC</legend>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">min</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">max</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">window</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Local GC</legend>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">min</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">max</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
@@ -95,24 +246,24 @@
 <legend>Terminal GC</legend>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">min</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">min</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">max</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">max</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">window</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">window</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
@@ -124,32 +275,32 @@
 <legend>Hairpin length</legend>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">A</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">A</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">T</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">T</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">C</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">C</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">G</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">G</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
@@ -157,172 +308,132 @@
 </fieldset>
 
 
+<fieldset>
+<legend>k-mer limit</legend>
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">Dimer limit</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">Dimer limit</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">Trimer limit</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">Trimer limit</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
+</fieldset>
 
 <fieldset>
 <legend>DR window</legend>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">local</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">local</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">regional</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">regional</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">global</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">global</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 </fieldset>
 
 <fieldset>
-<legend>DR ratio</legend>
+<legend>DR</legend>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">solo</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">solo ratio</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">local</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">local ratio</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">regional</label>
-  <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">global</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">regional ratio</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">global ratio</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">DR length</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 </fieldset>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">DR length</label>
-  <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
-  </div>
-</div>
 
 <fieldset>
 <legend>IR Length</legend>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">IR length min</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">IR length min</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">IR length max</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">IR length max</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">IR width</label>
+<div class="control-group row">
+  <label class="col-md-4 control-label" for="textinput">IR width</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
   </div>
 </div>
 </fieldset>
 
-<fieldset>
-<legend>GBlock Length</legend>
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">GBlock length min</label>
-  <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
+<!-- Button -->
+<div class="control-group row">
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
   </div>
 </div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">GBlock length max</label>
-  <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">GBlock length desired</label>
-  <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">GBlock overlap</label>
-  <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-    <p class="help-block">help</p>
-  </div>
-</div>
-
-</fieldset>
 </form>
+</body>
 
+</html>
