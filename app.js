@@ -47,9 +47,12 @@ var command = function() { return "DNAssemble_ScreenedGBlockLocal.pl -input " + 
 	" --OLIGO_OVERLAP_MIN 10";
 };
 
-var callback = function(error, stdout, stderr){
-	console.log(stdout);
-	console.log(stderr);
+var callback = function(response){
+	return function(error, stdout, stderr){
+		console.log(stdout);
+		console.log(stderr);
+		response.download(ioDir + time + '_Design.xml');
+	};
 };
 
 app.use(multer({ dest: ioDir,
@@ -68,19 +71,12 @@ app.get('/',function(request , response){
 	response.sendFile("/work/gui/index.html");
 });
 
-app.get('/ass', function(req, res){ 
-exec('ls -lah /tmp', function(error, stdout, stderr){
-		console.log(stdout);
-	});
-});
-
 app.post('/upload', function(request, response){
 	while(true){
 		if(doneUploading === true){
 			doneUploading = false;
 			doneProcessing = false;
-			exec(command(), {cwd: ioDir + '../'}, callback);
-			response.end("file uploaded");
+			exec(command(), {cwd: ioDir + '../'}, callback(response));
 			break;
 		}
 	}
