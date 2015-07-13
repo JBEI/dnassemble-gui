@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get -y install git ncbi-blast+ emboss libxml2 libxml2-dev libxml2-utils build-essential zlib1g-dev
+RUN apt-get update && apt-get -y install git ncbi-blast+ emboss libxml2 libxml2-dev libxml2-utils build-essential zlib1g-dev nodejs npm
 RUN apt-get update && apt-get -y install vim man-db
 
 # SSH keys for accessing DNAssemble source
@@ -27,14 +27,15 @@ RUN cd /work/genedesign-dev && perl Build.PL && ./Build installdeps && ./Build t
 RUN cpan  XML::LibXML
 RUN cd /work/dnassemble && perl Build.PL && ./Build && ./Build test && ./Build install
 
-RUN apt-get update && apt-get -y install nodejs npm
 RUN npm install -g node-dev express
 
 EXPOSE 80
 
 VOLUME /work/gui
 
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 #RUN cd /work/gui && npm install
+
 
 CMD cd /work/gui && node-dev app.js
 
@@ -42,7 +43,7 @@ CMD cd /work/gui && node-dev app.js
 # 
 # In the directory with the Dockerfile
 #  
-#   docker stop $(docker ps -aq) &&  docker build -t dnass . &&  docker run -t --rm --privileged dnass
+#   docker stop $(docker ps -aq) &&  docker build -t dnass . &&  docker run -t --rm --privileged -v /home/oge/dnassemble-docker/:/work/gui -p 80:80 dnass
 #
 # To get to the command line
 # 

@@ -14,7 +14,7 @@
     </head>
 
 <body>
-<form class="form-horizontal container">
+<form class="form-horizontal container" action="/upload" enctype="multipart/form-data" method="post">
 <!-- File Button --> 
 <div class="control-group row">
   <label class="col-md-4 control-label" for="filebutton">Upload FASTA sequence (the file should contain only one sequence)</label>
@@ -135,7 +135,7 @@
 
 <!-- Text input-->
 <div class="control-group row">
-  <label class="col-md-4 control-label" for="textinput">GBlock length max</label>
+  <label class="col-md-4 control-label" for="textinput">max</label>
   <div class="controls">
     <input id="textinput" name="textinput" type="text" placeholder="1000" class="input-xlarge">
   </div>
@@ -418,7 +418,7 @@
 <!-- Button -->
 <div class="control-group row">
   <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit">Submit</button>
   </div>
 </div>
 </form>

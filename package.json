@@ -16,6 +16,7 @@
     "url": "https://github.com/JBEI/dnassemble-gui/issues"
   },
   "dependencies": {
-    "express": "~4.13.1"
+    "express": "~4.13.1",
+    "multer": "~0.1.8"
   }
 }
