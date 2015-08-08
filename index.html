@@ -14,13 +14,18 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+        <style>
+        .main{
+          margin-top: 35px;
+        }
+        </style>
     </head>
 
 <body>
 <form class="form-horizontal container" action="/upload" enctype="multipart/form-data" method="post">
 <!-- File Button --> 
 <div class="control-group row">
-  <label class="col-md-4 control-label" for="filebutton">Upload FASTA sequence (the file should contain only one sequence)</label>
+  <label class="col-md-4 control-label" for="filebutton">Upload a file in FASTA or GENBANK format (the file should contain only one sequence)</label>
   <div class="controls">
     <input id="filebutton" name="filebutton" class="input-file" type="file">
   </div>
@@ -96,7 +101,7 @@
   </div>
 </div>
 
-<fieldset >
+<fieldset class="main">
 <legend>gBlock Length</legend>
 
 <!-- Text input-->
@@ -138,11 +143,11 @@
 <div id="optional" class="xcollapse">
   <!-- Text input-->
 
-  <fieldset>
-  <legend>G-C content</legend>
+  <fieldset  class="main">
+  <legend>G+C% content</legend>
     <div class="row">
       <fieldset class="col-md-6">
-      <legend>Global GC</legend>
+      <legend>Global G+C%</legend>
 
       <!-- Text input-->
       <div class="control-group row">
@@ -163,7 +168,7 @@
 
 
       <fieldset class="col-md-6">
-      <legend>Regional GC</legend>
+      <legend>Regional G+C%</legend>
 
       <!-- Text input-->
       <div class="control-group row">
@@ -193,7 +198,7 @@
 
     <div class="row">
       <fieldset class="col-md-6">
-      <legend>Local GC</legend>
+      <legend>Local G+C%</legend>
 
       <!-- Text input-->
       <div class="control-group row">
@@ -223,7 +228,7 @@
 
 
       <fieldset class="col-md-6">
-      <legend>Terminal GC</legend>
+      <legend>Terminal G+C%</legend>
 
       <!-- Text input-->
       <div class="control-group row">
@@ -253,7 +258,7 @@
   </fieldset>
 
 
-  <fieldset>
+  <fieldset  class="main">
   <legend>Simple repeats</legend>
     <div class="row">
 
@@ -315,15 +320,15 @@
     </div>
   </fieldset>
 
-  <fieldset>
+  <fieldset  class="main">
   <legend>Complex repeats</legend>
     <div class="row">
       <fieldset class="col-md-6">
-      <legend>DR window</legend>
+      <legend>Direct repeat parameters</legend>
 
       <!-- Text input-->
       <div class="control-group row">
-        <label class="col-md-4 control-label" for="textinput">local</label>
+        <label class="col-md-4 control-label" for="textinput">local window</label>
         <div class="controls">
           <input id="textinput" name="textinput" type="text" placeholder="70" class="input-xlarge">
         </div>
@@ -331,15 +336,24 @@
 
       <!-- Text input-->
       <div class="control-group row">
-        <label class="col-md-4 control-label" for="textinput">regional</label>
+        <label class="col-md-4 control-label" for="textinput">regional window</label>
         <div class="controls">
           <input id="textinput" name="textinput" type="text" placeholder="500" class="input-xlarge">
+        </div>
+      </div>
+
+
+      <!-- Text input-->
+      <div class="control-group row">
+        <label class="col-md-4 control-label" for="textinput">repeat unit length</label>
+        <div class="controls">
+          <input id="textinput" name="textinput" type="text" placeholder="8" class="input-xlarge">
         </div>
       </div>
       </fieldset>
 
       <fieldset class="col-md-6">
-      <legend>DR</legend>
+      <legend>Direct repeat</legend>
 
       <!-- Text input-->
       <div class="control-group row">
@@ -372,19 +386,12 @@
         </div>
       </div>
 
-      <!-- Text input-->
-      <div class="control-group row">
-        <label class="col-md-4 control-label" for="textinput">DR length</label>
-        <div class="controls">
-          <input id="textinput" name="textinput" type="text" placeholder="8" class="input-xlarge">
-        </div>
-      </div>
       </fieldset>
     </div>
 
     <div class="row">
-      <fieldset class="col-md-6">
-      <legend>IR</legend>
+      <fieldset class="col-md-6 main">
+      <legend>Inverted repeat</legend>
 
       <!-- Text input-->
       <div class="control-group row">
@@ -404,7 +411,7 @@
 
       <!-- Text input-->
       <div class="control-group row">
-        <label class="col-md-4 control-label" for="textinput">IR width</label>
+        <label class="col-md-4 control-label" for="textinput">inverted repeat width</label>
         <div class="controls">
           <input id="textinput" name="textinput" type="text" placeholder="100" class="input-xlarge">
         </div>
@@ -414,9 +421,9 @@
   </fieldset>
 
 <!-- Button -->
-<div class="control-group row">
+<div class="row" style="margin-top: 35px;">
   <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit">Submit</button>
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary form-group " type="submit">Submit</button>
   </div>
 </div>
 
